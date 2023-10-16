@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import './Navbar.css';
 
 function Navbar() {
   return (
@@ -29,7 +28,6 @@ function Navbar() {
             Reminders
           </NavLink>
         </li>
-        {/* Additional navigation links as per requirement */}
       </ul>
     </nav>
   );
