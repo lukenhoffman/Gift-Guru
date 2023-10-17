@@ -2,15 +2,15 @@
   "name": "gift-recommendation-app",
   "version": "1.0.0",
   "description": "A React and Node.js app for providing gift recommendations.",
-  "private": true, // You can keep this private flag if you want.
+  "private": true,
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "build": "npm run build --prefix client", // Add this script to build the client-side.
-    "test": "npm test --prefix client" // Add this script for testing the client-side.
+    "build": "npm run build --prefix client",
+    "test": "npm test --prefix client" .
   },
   "author": "Your Name",
   "license": "ISC",
