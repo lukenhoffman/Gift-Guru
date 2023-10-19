@@ -3,20 +3,31 @@ import PropTypes from 'prop-types';
 
 function RecommendationItem({ recommendation }) {
   return (
-    <li className="recommendation-item">
-      <h3>{recommendation.name}</h3>
-      <p>{recommendation.description}</p>
-      <img 
-        src={recommendation.imageUrl} 
-        alt={recommendation.name} 
-        className="recommendation-image"
-      />
-      <p>Price: ${recommendation.price}</p>
-      {/* Additional details and structured UI components would go here */}
-      <a href={recommendation.link} target="_blank" rel="noopener noreferrer">
-        Check it Out
-      </a>
-    </li>
+    <div className="recommendation-item">
+      <div className="recommendation-image-container">
+        <img
+          src={recommendation.imageUrl}
+          alt={recommendation.name}
+          className="recommendation-image"
+        />
+      </div>
+      <div className="recommendation-details">
+        <h3 className="recommendation-title">{recommendation.name}</h3>
+        <p className="recommendation-description">{recommendation.description}</p>
+        <div className="recommendation-price">
+          <span className="price-label">Price:</span>
+          <span className="price-value">${recommendation.price}</span>
+        </div>
+        <a
+          href={recommendation.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="recommendation-link"
+        >
+          Check it Out
+        </a>
+      </div>
+    </div>
   );
 }
 

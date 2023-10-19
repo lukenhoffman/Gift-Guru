@@ -1,0 +1,91 @@
+/* Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333; /* Navbar background color */
+    color: #fff; /* Navbar text color */
+    padding: 10px 20px; /* Adjust padding as needed */
+  }
+  
+  /* Navbar Brand (Logo) */
+  .navbar-brand {
+    font-size: 24px;
+    text-decoration: none;
+    color: #fff; /* Brand text color */
+    font-weight: bold;
+  }
+  
+  /* Navbar Mobile Menu Toggle */
+  .navbar-mobile-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff; /* Toggle icon color */
+  }
+  
+  /* Navbar Mobile Menu (Dropdown) */
+  .navbar-mobile-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px; /* Adjust the top position as needed */
+    right: 20px; /* Adjust the right position as needed */
+    background-color: #333; /* Mobile menu background color */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 150px; /* Adjust the minimum width as needed */
+  }
+  
+  /* Navbar Mobile Menu - Open State */
+  .navbar-mobile-menu.open {
+    display: flex;
+  }
+  
+  /* Navbar Mobile Menu Links */
+  .navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbar-nav li {
+    margin: 10px 0;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #fff; /* Mobile menu link text color */
+    font-size: 18px; /* Mobile menu link font size */
+    transition: color 0.3s ease;
+  }
+  
+  /* Navbar Mobile Menu Link Hover */
+  .nav-link:hover {
+    color: #00bcd4; /* Hover color for mobile menu links */
+  }
+  
+  /* Navbar Link - Active State */
+  .active {
+    font-weight: bold; /* Active link text style */
+  }
+  
+  /* Media Query for Mobile Menu Toggle Display */
+  @media (max-width: 768px) {
+    .navbar-mobile-toggle {
+      display: block; /* Show the mobile menu toggle icon */
+    }
+  
+    /* Hide the desktop menu when mobile menu is open */
+    .navbar-desktop-menu {
+      display: none;
+    }
+  
+    /* Add some padding to the body when mobile menu is open */
+    body.open-menu {
+      padding-right: 200px; /* Adjust padding as needed */
+      overflow: hidden;
+    }
+  }
+  

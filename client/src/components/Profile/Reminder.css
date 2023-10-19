@@ -1,0 +1,37 @@
+/* reminder.css */
+
+.reminder {
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+  }
+  
+  .reminder h3 {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  
+  .reminder p {
+    margin: 5px 0;
+  }
+  
+  .reminder .edit-btn,
+  .reminder .delete-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  
+  .reminder .edit-btn:hover,
+  .reminder .delete-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Additional styling can be added based on your design preferences */
+  

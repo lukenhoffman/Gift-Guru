@@ -24,21 +24,20 @@ function RecommendationList() {
     fetchRecommendations();
   }, []);
 
-  // JSX to render
   return (
     <div className="recommendation-list">
-      <h2>Gift Recommendations</h2>
-      {loading && <p>Loading recommendations...</p>}
-      {error && <p className="error">{error}</p>}
-      {recommendations.length > 0 && !loading && (
-        <ul>
+      <h2 className="recommendation-title">Gift Recommendations</h2>
+      {loading && <p className="loading-message">Loading recommendations...</p>}
+      {error && <p className="error-message">{error}</p>}
+      {!loading && recommendations.length === 0 && (
+        <p className="empty-message">No recommendations found!</p>
+      )}
+      {!loading && recommendations.length > 0 && (
+        <div className="recommendation-items">
           {recommendations.map(recommendation => (
             <RecommendationItem key={recommendation._id} recommendation={recommendation} />
           ))}
-        </ul>
-      )}
-      {!loading && recommendations.length === 0 && (
-        <p>No recommendations found!</p>
+        </div>
       )}
     </div>
   );

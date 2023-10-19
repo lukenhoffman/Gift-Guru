@@ -3,12 +3,21 @@ import PropTypes from 'prop-types';
 
 const Question = ({ question, options, name, handleChange, value }) => {
   return (
-    <div className="form-group">
-      <label htmlFor={name}>{question}</label>
+    <div className="question">
+      <label htmlFor={name} className="question-label">
+        {question}
+      </label>
       {options ? (
-        <select name={name} id={name} onChange={handleChange} value={value} required>
+        <select
+          name={name}
+          id={name}
+          className="question-select"
+          onChange={handleChange}
+          value={value}
+          required
+        >
           <option value="" disabled>
-            Select
+            Select an option
           </option>
           {options.map((option) => (
             <option key={option.value} value={option.value}>
@@ -21,6 +30,7 @@ const Question = ({ question, options, name, handleChange, value }) => {
           type="text"
           name={name}
           id={name}
+          className="question-input"
           onChange={handleChange}
           value={value}
           required
@@ -28,7 +38,7 @@ const Question = ({ question, options, name, handleChange, value }) => {
       )}
     </div>
   );
-}
+};
 
 Question.propTypes = {
   question: PropTypes.string.isRequired,

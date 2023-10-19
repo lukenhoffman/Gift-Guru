@@ -1,24 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Reminder.css'; // Import your CSS file for styling
 
 function Reminder({ title, date, notes, onEdit, onDelete }) {
+  const formattedDate = new Date(date).toLocaleDateString();
+
   return (
     <div className="reminder">
-      <h3>{title}</h3>
-      <p>
-        <strong>Date:</strong> {new Date(date).toLocaleDateString()}
-      </p>
-      {notes && (
+      <div className="reminder-header">
+        <h3>{title}</h3>
+        <button onClick={onEdit} className="edit-btn">
+          Edit
+        </button>
+        <button onClick={onDelete} className="delete-btn">
+          Delete
+        </button>
+      </div>
+      <div className="reminder-details">
         <p>
-          <strong>Notes:</strong> {notes}
+          <strong>Date:</strong> {formattedDate}
         </p>
-      )}
-      <button onClick={onEdit} className="edit-btn">
-        Edit
-      </button>
-      <button onClick={onDelete} className="delete-btn">
-        Delete
-      </button>
+        {notes && (
+          <p>
+            <strong>Notes:</strong> {notes}
+          </p>
+        )}
+      </div>
     </div>
   );
 }

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { useAuth } from './Auth/AuthProvider';
 
-function Login({ onLogin }) {
+function Login() {
+  const { login } = useAuth();
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -14,9 +16,10 @@ function Login({ onLogin }) {
     }));
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    onLogin(formData);
+    // Call the login function from the useAuth hook
+    await login(formData);
   };
 
   return (

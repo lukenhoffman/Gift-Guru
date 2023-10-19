@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import Question from './Question'; // import the Question component
+import Question from './Question';
 
 const Questionnaire = () => {
-  const [formData, setFormData] = useState({
+  const initialFormData = {
     ageGroup: '',
     interests: '',
     occasion: '',
-  });
+  };
 
+  const [formData, setFormData] = useState(initialFormData);
   const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e) => {
@@ -34,42 +35,45 @@ const Questionnaire = () => {
       <h2>Find the Perfect Gift!</h2>
       {!submitted ? (
         <form onSubmit={handleSubmit}>
-          <Question 
-              question="Age Group:"
-              name="ageGroup"
-              options={[
-                  {label: "Select Age Group", value: ""},
-                  {label: "Children", value: "children"},
-                  {label: "Teens", value: "teens"},
-                  {label: "Adults", value: "adults"}
-              ]}
-              handleChange={handleChange}
-              value={formData.ageGroup || ''}
+          <Question
+            question="Age Group:"
+            name="ageGroup"
+            options={[
+              { label: 'Select Age Group', value: '' },
+              { label: 'Children', value: 'children' },
+              { label: 'Teens', value: 'teens' },
+              { label: 'Adults', value: 'adults' },
+            ]}
+            handleChange={handleChange}
+            value={formData.ageGroup || ''}
           />
-          <Question 
-              question="Interests:"
-              name="interests"
-              handleChange={handleChange}
-              value={formData.interests || ''}
+          <Question
+            question="Interests:"
+            name="interests"
+            handleChange={handleChange}
+            value={formData.interests || ''}
           />
-          <Question 
-              question="Occasion:"
-              name="occasion"
-              options={[
-                  {label: "Select Occasion", value: ""},
-                  {label: "Birthday", value: "birthday"},
-                  {label: "Anniversary", value: "anniversary"}
-              ]}
-              handleChange={handleChange}
-              value={formData.occasion || ''}
+          <Question
+            question="Occasion:"
+            name="occasion"
+            options={[
+              { label: 'Select Occasion', value: '' },
+              { label: 'Birthday', value: 'birthday' },
+              { label: 'Anniversary', value: 'anniversary' },
+            ]}
+            handleChange={handleChange}
+            value={formData.occasion || ''}
           />
           <button type="submit">Find Recommendations</button>
         </form>
       ) : (
-        <p>Thank you for submitting! Checking for recommendations...</p>
+        <div className="submitted-message">
+          <p>Thank you for submitting!</p>
+          <p>Checking for recommendations...</p>
+        </div>
       )}
     </div>
   );
-}
+};
 
 export default Questionnaire;
