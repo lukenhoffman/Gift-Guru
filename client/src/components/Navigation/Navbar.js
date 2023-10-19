@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { FaBars, FaTimes } from 'react-icons/fa'; // You can use icons from a library like react-icons for the menu toggle
 import './navbar.css';
 
 function Navbar() {
@@ -60,7 +59,6 @@ function Navbar() {
         </ul>
       </div>
       <div className="navbar-mobile-toggle" onClick={toggleMobileMenu}>
-        {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
       </div>
     </nav>
   );
