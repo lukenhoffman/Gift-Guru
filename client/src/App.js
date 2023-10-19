@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 // Components and pages
-import Navbar from './components/Navigation/Navbar';
+import Navbar from './components/Assets/Styles/Navbar';
 import HomePage from './components/pages/HomePage';
 import LoginPage from './components/pages/LoginPage';
 import RegisterPage from './components/pages/RegisterPage';
@@ -15,7 +15,7 @@ import Questionnaire from './components/Questionnaire/Questionnaire';
 import AuthProvider from './components/Auth/AuthProvider';
 
 // Styles
-import './client/src/components/Navigation/navbar.css';
+import './Assets/Styles/Navbar.css';
 
 function App() {
   return (
