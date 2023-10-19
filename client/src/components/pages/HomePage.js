@@ -1,7 +1,16 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom'; // Import useHistory
 import './HomePage.css'; // Import your CSS file for styling
 
 function HomePage() {
+  const history = useHistory(); // Initialize history
+
+  // Function to handle the "Get Started" button click
+  const handleGetStartedClick = () => {
+    // Replace '/signup' with the actual path you want to navigate to
+    history.push('/RegisterPage');
+  };
+
   return (
     <div className="home-page">
       <div className="hero">
@@ -27,7 +36,9 @@ function HomePage() {
       </div>
       <div className="cta">
         <p>Ready to become a gift-guru?</p>
-        <button className="cta-button">Get Started</button>
+        <button className="cta-button" onClick={handleGetStartedClick}>
+          Get Started
+        </button>
       </div>
     </div>
   );
