@@ -1,0 +1,60 @@
+/* UserProfile Container */
+.user-profile {
+    background-color: #fff; /* User profile background color */
+    border: 1px solid #e0e0e0; /* Border color */
+    padding: 20px; /* Padding around the user profile */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Box shadow for user profile */
+  }
+  
+  /* Loading Message */
+  .loading-message {
+    font-size: 18px;
+    text-align: center;
+    color: #666; /* Loading message text color */
+  }
+  
+  /* Error Message */
+  .error-message {
+    font-size: 18px;
+    text-align: center;
+    color: #f44336; /* Error message text color */
+  }
+  
+  /* User Profile Avatar */
+  .avatar {
+    max-width: 150px; /* Max width for the avatar */
+    height: auto;
+    border-radius: 50%; /* Make the avatar circular */
+    margin: 0 auto; /* Center the avatar horizontally */
+    display: block;
+  }
+  
+  /* User Profile Name */
+  h2 {
+    font-size: 24px; /* User profile name font size */
+    text-align: center;
+    margin-top: 10px; /* Spacing between avatar and name */
+    color: #333; /* User profile name text color */
+  }
+  
+  /* Favorite Items List */
+  .favorite-items-list {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin-top: 20px; /* Spacing between name and favorite items */
+  }
+  
+  .favorite-items-list li {
+    font-size: 16px; /* Font size for favorite item list */
+    margin: 5px 0;
+    color: #666; /* Favorite item list text color */
+  }
+  
+  /* No User Message */
+  .no-user-message {
+    font-size: 18px;
+    text-align: center;
+    color: #666; /* No user message text color */
+  }
+  
