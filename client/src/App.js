@@ -15,7 +15,7 @@ import Questionnaire from './components/Questionnaire/Questionnaire';
 import AuthProvider from './components/Auth/AuthProvider';
 
 // Styles
-import './assets/styles/Navbar.css';
+import './client/src/components/Navigation/navbar.css';
 
 function App() {
   return (
